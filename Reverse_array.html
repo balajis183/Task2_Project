@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse of an array</title>
+  </head>
+  <body>
+    <h1 style="font-weight: 500; font-size: 18px">
+      Reverse the elements in an array using for loop <br />
+    </h1>
+    <h4 style="font-weight: 500">
+      The data is being printed on the document instead of console.log
+    </h4>
+    <script>
+      let arr = [20, 30, 80, 95, 66, 85, 183];
+
+      document.write("Before reversing the array : ");
+      document.write("<br>");
+      document.write("<br>");
+
+      document.write("The array elments are : " + "<br>");
+      for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i]);
+        document.write("<br>");
+      }
+
+      for (let i = 0; i < arr.length / 2; i++) {
+        let temp = arr[i];
+        arr[i] = arr[arr.length - i - 1];
+        arr[arr.length - i - 1] = temp;
+      }
+
+      document.write(
+        "The array elements after reversing the array is  " + "<br>"
+      );
+
+      for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i]);
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>

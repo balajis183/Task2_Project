@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Removal of Duplicate Elements</title>
+  </head>
+  <body>
+    <h1 style="font-weight: 400">
+      Finding duplicate elements, removing them, and printing the array
+    </h1>
+    <script>
+      let arr = [10, 10, 20,20, 99, 99, 95, 95, 183,183];
+
+      // Display the original array before
+
+      for (let index = 0; index < arr.length; index++) {
+        document.write(arr[index]);
+        document.write("<br>");
+      }
+
+      // Removing duplicates using for loops
+
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+          if (arr[i] === arr[j]) {
+            arr.splice(j, 1); // Remove the duplicate element
+            j--; // Adjust the index after removing an element
+          }
+        }
+      }
+
+      // Display the array after removing duplicate elements
+      
+      document.write("<br>");
+      document.write("The array after removing the elements are :"+"<br>");
+      for (let index = 0; index < arr.length; index++) {
+        document.write(arr[index]);
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
